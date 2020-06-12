@@ -1,0 +1,16 @@
+{
+	"manifest_version": 2,
+  
+	"name": "Side-by-side editing - Facepunch wiki",
+	"description": "Side-by-side editing in the facepunch wiki",
+	"version": "1.0",
+	"browser_action":{
+		"default_icon": "images/icon.png"
+	},
+	"permissions": ["tabs", "http://*/*"],
+	"content_scripts": [{
+		"matches": [ "https://wiki.facepunch.com/*~edit"],
+		"js": ["sidebyside.js"]
+	}],
+	"web_accessible_resources": ["sidebyside.js"]
+}
