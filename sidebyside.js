@@ -13,7 +13,7 @@ var previewButton = document.getElementById("previewbutton");
 previewButton.click();
 
 var preview = document.getElementById("preview");
-preview.style.maxWidth = "50%";
+preview.style.width = "50%";
 preview.style.left = "unset";
 container.appendChild(preview)
 
