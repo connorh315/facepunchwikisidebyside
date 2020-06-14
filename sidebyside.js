@@ -17,6 +17,10 @@ preview.style.width = "50%";
 preview.style.left = "unset";
 container.appendChild(preview)
 
+window.onbeforeunload = function() {
+    return true;
+};
+
 edit.addEventListener("input", (event) => {
 	clearTimeout(timer);
 	timer = setTimeout(function() {
