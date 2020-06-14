@@ -17,6 +17,17 @@ preview.style.width = "50%";
 preview.style.left = "unset";
 container.appendChild(preview)
 
+function callback() {
+	window.onbeforeunload = null;
+}
+
+var ele = document.getElementsByTagName("form")[0];
+if(ele.addEventListener){
+    ele.addEventListener("submit", callback, false);  //Modern browsers
+}else if(ele.attachEvent){
+    ele.attachEvent('onsubmit', callback);            //Old IE
+}
+
 window.onbeforeunload = function() {
     return true;
 };
